@@ -1,12 +1,13 @@
 import SpotifyAPIManager as sAPI
+import json
 
 def main():
     manager = sAPI.SpotifyAPIManager()
 
-    response = manager.spotify_request('albums/4aawyAB9vmqN3uQ7FjRGTy')
-    print(response)
+    request = manager.spotify_request('/me/tracks')
 
-
+    with open('test.json', 'w') as f:
+        json.dump(request, f)
 
 if __name__ == '__main__':
     main()
