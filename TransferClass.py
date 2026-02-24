@@ -1,5 +1,6 @@
 import YTmusicAPIManager as ytAPI
 import SpotifyAPIManager as sAPI
+from joblib import Parallel, delayed
 
 class TransferaClass():
     def __init__(self, origin: str, destine: str):
@@ -22,15 +23,17 @@ class TransferaClass():
 
 
     def spotify_to_youtube(self, destine_name):
+        #Create a destine playlist in ytmusic
         playlistId = self.ytConn.create_playlist(destine_name, 'Playlist auto created by MoveMusic  [from SPOTIFY to YOUTUBE]')
-        trackName_list = self.spConn.get_liked_tracks() #list of names of all tracks
-        
-        #itero sobre eles e pesquiso 
-        for track in trackName_list:
-            video_id = self.ytConn.search(track)[0]['videoId']
-            self.ytConn.add_track_playlist(playlist_id=playlistId, video_id=video_id) #i dont care about the reponse json (For now)
-            print(track)
 
+        #Retrieve the liked tracks of connected spotify profile
+        trackName_list = self.spConn.get_liked_tracks() 
+        
+        #Retriving ytmusic track's id given a trackName_list
+        videos_id = self.ytConn.get_id_trackName(trackName_list)
+
+        #Add tracks to ytmusic previosly created playlist
+        self.ytConn.add_tracks_playlist(playlist_id=playlistId, video_id=videos_id)
             
     def youtube_to_spotify(self):
         pass
