@@ -1,0 +1,22 @@
+{
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate",
+    "accept-language": "pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3",
+    "alt-used": "music.youtube.com",
+    "authorization": "SAPISIDHASH 1771897625_001ea243f4cf15fe470425ba5b2a8f1a5a283bb0_u SAPISID1PHASH 1771897625_001ea243f4cf15fe470425ba5b2a8f1a5a283bb0_u SAPISID3PHASH 1771897625_001ea243f4cf15fe470425ba5b2a8f1a5a283bb0_u",
+    "connection": "keep-alive",
+    "content-encoding": "gzip",
+    "content-type": "application/json",
+    "cookie": "__Secure-ROLLOUT_TOKEN=CN3lzpnAiLDIpgEQqYSdwvKZjgMYhI-sxePvkgM%3D; VISITOR_INFO1_LIVE=7ETWufvoYsE; VISITOR_PRIVACY_METADATA=CgJCUhIEGgAgLw%3D%3D; PREF=f6=40000080&f7=100&tz=America.Sao_Paulo&repeat=NONE&f5=30000&volume=100; __Secure-1PSIDTS=sidts-CjUBBj1CYvHR8-sO9jQquQXOVvGs_V8o8grhnBlICefuF_8gjO5lRrYhuhXBDDQWuOfzrRtFQhAA; __Secure-3PSIDTS=sidts-CjUBBj1CYvHR8-sO9jQquQXOVvGs_V8o8grhnBlICefuF_8gjO5lRrYhuhXBDDQWuOfzrRtFQhAA; __Secure-3PAPISID=lHsNRVQIzpCCn0QL/AKleyzalPOf4kCHCV; __Secure-3PSID=g.a0007Ajv1VzElup7p2N8QJyS2zrePzziFK07ZapDaCGe4mxMxBVJT3Ex5r1kNezx4Mu1ufCQOwACgYKAQISARESFQHGX2MisLdjRL0QCErqbW46WJmvbRoVAUF8yKoLVOLapt8o9Ml6qoWbiJ_J0076; __Secure-3PSIDCC=AKEyXzXtQ67Ugp8zmncvI92yO8A87d57-DCRJCjmP4KNs5V2f4crSCMn33P22KzMz3Vb8jKIOw; __Secure-YNID=16.YT=mfJm-Ry4z3rfKvjdvwnqQ8wb1sROTM1jPx_bBksPXLpxnnrt17oz8aaIYY4SZgGNdEz4MPcpCassl2iyShTw_bt9uKefmamyCBRR3q2RGyoeYOCsUldZ3D2ysBl6VgVkwY76ymq5dJ_nplMTTmZN6Ff2ctkN-ctMhpa1Z0wJE-nPkU-q-h3Zj3RHp-BJji5bm7981uJWH-xf5_HIXlmyaP76es6eY8sgUjm2XWsOSjH00iMhllq61Yn6q-0NDfJ2AD-RQ2igdp0Jb_myknM_4v-i8HBwCt1_KwJXpCs6GFr96pGSluPApz7jLHBJ0MTNWTMZmQ7LU6GlKFjmn9t31w; __Secure-ROLLOUT_TOKEN=CPKEns_73aivywEQmJb4xePvkgMY2IKDxuPvkgM%3D; _gcl_au=1.1.1400180537.1771855364; HSID=AnCz6ntja7-OpPbDu; SSID=A8zX5wjYZGkRu4DHh; APISID=a2u8IcsE2w153lxt/A_klQrpTZWXuW3uV5; SAPISID=lHsNRVQIzpCCn0QL/AKleyzalPOf4kCHCV; __Secure-1PAPISID=lHsNRVQIzpCCn0QL/AKleyzalPOf4kCHCV; SID=g.a0007Ajv1VzElup7p2N8QJyS2zrePzziFK07ZapDaCGe4mxMxBVJjo_okuylkUmdPZbu5EZ5gAACgYKAVcSARESFQHGX2MiGJYnTRToRVVBd_AmWm0nGhoVAUF8yKqP-Kf2KKFP06QZsjrfdiXd0076; __Secure-1PSID=g.a0007Ajv1VzElup7p2N8QJyS2zrePzziFK07ZapDaCGe4mxMxBVJ6sJi8uG2tCtWfHx_IiwYIgACgYKAUgSARESFQHGX2MiPe2_xAH5bhe7UWD6WYlEExoVAUF8yKrDYhoEZ5j0-8AEpdRC9Fpg0076; LOGIN_INFO=AFmmF2swRQIhAL6YYs90TSSMHwpoc15BcA8siSEEJjbcBMxNWTtbVfnmAiBOCcADr6cY7AdcFVsqFbxWWFogTHhY6Ka0sGOWeYcLWw:QUQ3MjNmejRSYnNOOGRZOC0xaWxBbWVGYlk1cnliU0kyY1hDRWZwWGdHc1JQbWpkUUVJSXdqVXhhWnktSHN2amNFc0JsQk5TX2pWd0pYdWhUTDlVMk1UNHUxYVFrT2VBTWRFZ3hTeUFJSDBGYWRDVGF2WXlFQzluV2JuTVJIQk51cUoyVUdQbmsyUGxyUGZnUXpCR2twVjVtbUJIcW9HTjl3; SIDCC=AKEyXzUK7__3zGHe_cPM8rz0VF1NEPnHEtsbSZq4dkaT2MPBuda5zr99IzrkML23iHCgpjb_; __Secure-1PSIDCC=AKEyXzVnIBvfqY0V0-UAG4HTpwUpURnvx6Zs1zm1ysTZWM-LwqytU7ds4PhecyhbjUtnxUEQJQ; YSC=6X_L0Zio44s",
+    "origin": "https://music.youtube.com",
+    "priority": "u=0",
+    "referer": "https://music.youtube.com/",
+    "te": "trailers",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:88.0) Gecko/20100101 Firefox/88.0",
+    "x-goog-authuser": "0",
+    "x-goog-visitor-id": "Cgs3RVRXdWZ2b1lzRSj5hfTMBjIKCgJCUhIEGgAgLw%3D%3D",
+    "x-origin": "https://music.youtube.com",
+    "x-youtube-bootstrap-logged-in": "true",
+    "x-youtube-client-name": "67",
+    "x-youtube-client-version": "1.20260218.03.00"
+}

@@ -1,13 +1,11 @@
 import SpotifyAPIManager as sAPI
+import YTmusicAPIManager as ytAPI
+import TransferClass as tAPI
 import json
 
 def main():
-    manager = sAPI.SpotifyAPIManager()
-
-    request = manager.spotify_request('/me/tracks')
-
-    with open('test.json', 'w') as f:
-        json.dump(request, f)
-
+    tranferConn = tAPI.TransferaClass('spo', 'yt')
+    tranferConn.transfer_saved_tracks(input("Qual o nome da playlist?"))
+    
 if __name__ == '__main__':
     main()

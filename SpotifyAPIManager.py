@@ -25,7 +25,7 @@ class SpotifyAPIManager():
  
     def _is_token_valid(self):
         """
-        Checks if spotify
+        Checks if spotify token is still valid
         """
         return False if self.token is None else self.token["expires_in"] >= 90  #arbitrary low expiring sec so we dont keep requesting 
 
@@ -91,7 +91,7 @@ class SpotifyAPIManager():
             self.code_challenge = self._generate_code_challenge(self.code_verifier)
 
         url = 'https://accounts.spotify.com/authorize'
-        scope = 'user-read-private user-read-email user-library-read'
+        scope = 'user-read-private user-read-email user-library-read playlist-read-private'
         params = {
             'client_id': self.client_id,  # fixed typo
             'response_type': 'code',
@@ -116,3 +116,30 @@ class SpotifyAPIManager():
 
         while self.auth_code is None:
             pass
+
+    def get_liked_tracks_byPage(self, page = 0) -> dict:
+        """
+        Returns 50 tracks corresponding to the page your in.
+        (e.g page 0: 0 - 49; page 1: 50-99, ...)
+        """
+        
+        limit = 50
+        offset = page*50
+        reponse = self.spotify_request(f'/me/tracks?limit={limit}&offset={offset}')
+        return reponse
+    
+    def get_liked_tracks(self) -> list:
+        """
+            Return the list of all liked tracks name(str) + artist_name_0(str) + artist_name_1(str) + ... 
+        """
+        page = 0
+        track_list = []
+        track_page = self.get_liked_tracks_byPage(page)
+        while len(track_page['items']) != 0:
+            for track in track_page['items']:
+                track_list.append(track['track']['name']+ " " + " ".join(artist['name'] for artist in track['track']['artists']))
+
+            page += 1
+            track_page = self.get_liked_tracks_byPage(page)
+        
+        return track_list
