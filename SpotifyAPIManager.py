@@ -61,7 +61,7 @@ class SpotifyAPIManager():
         self.token = response.json()
         return response.json()    #returns a dict with value in json response
         
-    def spotify_request(self, endpoint:str) -> dict:
+    def _spotify_request(self, endpoint:str) -> dict:
         access_token = self._get_token_spotify()["access_token"]
         
         url = 'https://api.spotify.com/v1' + endpoint
@@ -125,7 +125,7 @@ class SpotifyAPIManager():
         
         limit = 50
         offset = page*50
-        reponse = self.spotify_request(f'/me/tracks?limit={limit}&offset={offset}')
+        reponse = self._spotify_request(f'/me/tracks?limit={limit}&offset={offset}')
         return reponse
     
     def get_liked_tracks(self) -> list:

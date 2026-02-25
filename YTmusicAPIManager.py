@@ -1,10 +1,10 @@
 from ytmusicapi import YTMusic, OAuthCredentials
 from joblib import Parallel, delayed
+from PlayerAPIManager import PlayerAPIManager
 
 class YTmusicAPIManager():
     def __init__(self):
         self.ytmusic = YTMusic("browser.json")
-
 
     def get_controller(self):
         """
@@ -25,10 +25,10 @@ class YTmusicAPIManager():
         return self.ytmusic.create_playlist(title, description, privacy_status=privacy_stats.upper())
 
     
-    def add_tracks_playlist(self, playlist_id: str, video_id: list[str]):
+    def add_tracks(self, playlist_id: str, video_id: list[str]):
         return self.ytmusic.add_playlist_items(playlist_id, video_id, duplicates=True)
     
-    def get_id_trackName(self, trackList: list[str]) -> list[str]:
+    def get_tracksId(self, trackList: list[str]) -> list[str]:
         def _get_video_id(track):
             list_results = self.search(track)
             if len(list_results) != 0: 
@@ -41,3 +41,7 @@ class YTmusicAPIManager():
         videos_id = parallel_obj(delayed(_get_video_id)(track) for track in trackList)  #returns the list of id for names
         videos_id = [vid for vid in videos_id if vid is not None]
         return videos_id
+    
+    # def get_liked_tracks(self) -> list[str]:
+    #     #get size of liked songs
+    #     return self.ytmusic.get_liked_songs(limit=)
