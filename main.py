@@ -4,9 +4,11 @@ import TransferClass as tAPI
 import json
 
 def main():
-    print(ytAPI.YTmusicAPIManager().get_controller().get_playlist('LM',limit=100))
-    # tranferConn = tAPI.TransferaClass('spo', 'yt')
-    # tranferConn.transfer_saved_tracks(input("Qual o nome da playlist?"))
+    ytConn = ytAPI.YTmusicAPIManager()
+    sConn  = sAPI.SpotifyAPIManager()
+
+    tranferConn = tAPI.TransferaClass(ytConn, sConn)
+    tranferConn.transfer_liked_tracks(input("Qual o nome da playlist de destino?"))
     
 if __name__ == '__main__':
     main()

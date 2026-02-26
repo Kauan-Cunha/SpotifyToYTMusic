@@ -1,2 +1,0 @@
-finalizar a implementação dos metodos abstrados a fim de_ 
-fazer um unico metodo em transfer que aceite qualquer MusicPlayer.

@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 
 class PlayerAPIManager(ABC):
     @abstractmethod
-    def get_liked_tracks(self):
+    def get_liked_tracks(self) -> list[str]:
         """
-            The defition of liked_tracks varies depending on the player. It stands for any sorta of liked/saved/stared tracks.
+            Return the list of all liked tracks name(str) + artist_name_0(str) + artist_name_1(str) + ... 
         """
         pass
 
@@ -32,8 +32,9 @@ class PlayerAPIManager(ABC):
         pass
 
     @abstractmethod
-    def create_playlist(self, title: str, description: str, privacy_stats:str):
+    def create_playlist(self, title: str, description: str, privacy_stats:str) -> str:
         """
-            Creates playlist with given title, description and privacy_stats
+            Creates playlist with given title, description and privacy_stats.
+            RETURNS: playlist id
         """
         pass
