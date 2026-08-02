@@ -1,0 +1,6 @@
+fastapi
+flask
+joblib
+requests
+uvicorn
+ytmusicapi
